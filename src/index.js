@@ -1,5 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 
-ReactDOM.render( <App />, document.getElementById('root') );
+import LoginProvider from './context/LoginProvider';
+import App from './containers/App';
+
+ReactDOM.render(
+	<LoginProvider>
+		<App />
+	</LoginProvider>,
+	document.getElementById('root')
+);

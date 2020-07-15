@@ -30,7 +30,8 @@ module.exports = {
 		plugins: [
 			new HtmlWebPackPlugin({
 					template: path.resolve( __dirname, 'public/index.html' ),
-					filename: 'index.html'
+					filename: 'index.html',
+					favicon: path.resolve( __dirname, 'public/favicon.ico' ),
 			})
 		]
 };
