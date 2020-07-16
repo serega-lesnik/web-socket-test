@@ -32,12 +32,15 @@ const Login = ({
 		logIn(userCredentials, cearFields)(loginDispatch);
 	}
 
+	const btnDisabled = (!userCredentials[PASSWORD] || !userCredentials[USERNAME] || isFetching);
+
 	return (
 		<LoginComponent
 			userCredentials={userCredentials}
 			inputChange={inputChange}
 			handleLogin={handleLogin}
 			error={error}
+			btnDisabled={btnDisabled}
 		/>
 	);
 };

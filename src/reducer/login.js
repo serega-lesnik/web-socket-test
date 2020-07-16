@@ -1,5 +1,4 @@
 import React from "react";
-export const ContextLogin = React.createContext();
 
 import { getKey } from '../services/localStorrageServices';
 import loginModel from './models/loginModel';
@@ -12,6 +11,7 @@ import {
 
 const token = getKey();
 
+export const ContextLogin = React.createContext();
 export const initialState = {
 	...loginModel,
 	token,
@@ -21,6 +21,7 @@ export const initialState = {
 export const loginReducer = (state = initialState, action) => {
 	const { type } = action;
 	if (!type) return state;
+
 	switch (type) {
 
 		case LOGIN_FETCHING: {

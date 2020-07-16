@@ -4,4 +4,5 @@ export const API_URL = 'https://work.vint-x.net/api/';
 
 export const API_ENDPOINTS = {
 	LOGIN: 'login',
+	SOCKET: 'subscribe',
 };

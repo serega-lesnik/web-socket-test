@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { ContextLogin } from '../reducer/login';
+import { ContextSocket } from '../reducer/socket';
 
 import Login from './Login';
 import Home from './Home';
@@ -9,14 +10,19 @@ import Home from './Home';
 // const Home = React.lazy(() => import('./components/Home'));
 
 const App = () => {
-	const {state, dispatch} = React.useContext(ContextLogin);
+	const {loginState, loginDispatch} = React.useContext(ContextLogin);
+	const { socketState, wsDispatch } = React.useContext(ContextSocket);
 
-	
-	// console.log('--- App props:', state);
-	const { token } = state;
-	let isAuth = !!token;
-	return(
-		isAuth ? <Home  loginDispatch={dispatch} /> : <Login {...state} loginDispatch={dispatch} />
+	// console.log('--- App props:', loginState);
+	const { token } = loginState;
+	const isAuth = !!token;
+	return(isAuth ?
+			<Home
+				{...socketState}
+				loginDispatch={loginDispatch}
+				wsDispatch={wsDispatch}
+			/> :
+			<Login {...loginState} loginDispatch={loginDispatch} />
 	);
 };
 

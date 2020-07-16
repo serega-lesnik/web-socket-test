@@ -1,15 +1,10 @@
 import React from 'react';
 import { ContextLogin, initialState, loginReducer } from '../reducer/login';
 
-// import {AuthProvider} from './auth-context';
-// import {UserProvider} from './user-context';
-
-// const AuthContext = React.createContext()
-
 const LoginProvider = ({children}) => {
 	const [ state, dispatch ] = React.useReducer(loginReducer, initialState);
 	return (
-		<ContextLogin.Provider value={{dispatch, state}}>
+		<ContextLogin.Provider value={{ loginDispatch: dispatch, loginState: state }}>
 			{children}
 		</ContextLogin.Provider>
 	)

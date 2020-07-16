@@ -1,5 +1,5 @@
-import { getKey, setKey, removeKey } from '../../services/localStorrageServices';
-import { HTTP_HEADER_NAME_OF_TOKEN, API_ENDPOINTS } from '../../constants';
+import { setKey, removeKey } from '../../services/localStorrageServices';
+import { API_ENDPOINTS } from '../../constants';
 import Http from '../../services/httpServicae';
 
 export const LOGIN = 'login.action';

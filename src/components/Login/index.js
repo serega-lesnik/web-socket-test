@@ -12,6 +12,7 @@ const LoginComponent = ({
 	inputChange,
 	handleLogin,
 	error,
+	btnDisabled,
 }) => {
 
 	return (
@@ -32,7 +33,7 @@ const LoginComponent = ({
 					type='password'
 					placeholder='Password'
 					labelText='Password'
-					value={userCredentials[{PASSWORD}]}
+					value={userCredentials[PASSWORD]}
 					inputChange={inputChange}
 				/>
 			</div>
@@ -40,7 +41,10 @@ const LoginComponent = ({
 				<ErrorMessage error={error} />
 			</div>
 
-			<LoginButton handleLogin={handleLogin} />
+			<LoginButton
+				handleLogin={handleLogin}
+				disabled={btnDisabled}
+			/>
 		</form>
 	);
 };
