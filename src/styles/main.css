@@ -1,0 +1,51 @@
+html, body {
+  border: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+	height: 100vh;
+	width: 100%;
+}
+#root, .container {
+	height: 100%;
+	width: 100%;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #aee;
+}
+
+.container-panel {
+	background-color: #fff;
+	padding: 24px;
+	border: solid 1px #999;
+	box-shadow: 10px 10px 5px rgba(0, 0, 0, .2);
+	position: relative;
+}
+
+.row {
+	margin: 16px 0;
+}
+
+.log-button {
+	background-color: #27e;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	padding: 8px 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+
+.log-button:disabled {
+	background-color: #B7B7B7;
+}

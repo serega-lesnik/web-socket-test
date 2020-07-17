@@ -10,7 +10,7 @@ const LoginButton = ({
 	}
 
 	return (
-		<button className='login-button' onClick={handleClick} disabled={disabled}>
+		<button className='log-button' onClick={handleClick} disabled={disabled}>
 			Login
 		</button>
 	)

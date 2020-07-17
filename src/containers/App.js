@@ -6,6 +6,8 @@ import { ContextSocket } from '../reducer/socket';
 import Login from './Login';
 import Home from './Home';
 
+import '../styles/main.css';
+
 // const Login = React.lazy(() => import('./components/Login'));
 // const Home = React.lazy(() => import('./components/Home'));
 

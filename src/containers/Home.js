@@ -37,7 +37,11 @@ const Home = ({
 				socketConnected()(wsDispatch);
 				setWs(wsClient);
 			};
-			wsClient.onclose = () => {
+			wsClient.onclose = e => {
+				/* if (e.code == '401' || e.code == '400') {
+					handleLogout();
+					return;
+				} */
 				socketDisconnected()(wsDispatch);
 				setWs(null);
 			};

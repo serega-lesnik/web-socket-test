@@ -4,6 +4,8 @@ import Input from './Input';
 import LoginButton from './LoginButton';
 import ErrorMessage from './ErrorMessage';
 
+import './login.css';
+
 const USERNAME = 'username';
 const PASSWORD = 'password';
 
@@ -16,36 +18,38 @@ const LoginComponent = ({
 }) => {
 
 	return (
-		<form className='login'>
-			<div className='row'>
-				<Input
-					name={USERNAME}
-					placeholder='User name'
-					labelText='Username'
-					value={userCredentials[USERNAME]}
-					inputChange={inputChange}
-				/>
-			</div>
+		<div className='container'>
+			<form className='container-panel login'>
+				<div className='row'>
+					<Input
+						name={USERNAME}
+						placeholder='User name'
+						labelText='Username'
+						value={userCredentials[USERNAME]}
+						inputChange={inputChange}
+					/>
+				</div>
 
-			<div className='row'>
-				<Input
-					name={PASSWORD}
-					type='password'
-					placeholder='Password'
-					labelText='Password'
-					value={userCredentials[PASSWORD]}
-					inputChange={inputChange}
-				/>
-			</div>
-			<div className='row'>
-				<ErrorMessage error={error} />
-			</div>
+				<div className='row'>
+					<Input
+						name={PASSWORD}
+						type='password'
+						placeholder='Password'
+						labelText='Password'
+						value={userCredentials[PASSWORD]}
+						inputChange={inputChange}
+					/>
+				</div>
+				<div className='row'>
+					<ErrorMessage error={error} />
+				</div>
 
-			<LoginButton
-				handleLogin={handleLogin}
-				disabled={btnDisabled}
-			/>
-		</form>
+				<LoginButton
+					handleLogin={handleLogin}
+					disabled={btnDisabled}
+				/>
+			</form>
+		</div>
 	);
 };
 

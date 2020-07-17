@@ -4,6 +4,8 @@ import LogOutButton from './LogOutButton';
 import ConnectedMsg from './ConnectedMsg';
 import ShowMessage from './ShowMessage';
 
+import './home.css';
+
 const HomeComponent = ({
 	connected,
 	lastMessage,
@@ -11,10 +13,14 @@ const HomeComponent = ({
 }) => {
 
 	return (
-		<div>
-			<LogOutButton handleLogout={handleLogout} />
-			<ConnectedMsg connected={connected} />
-			<ShowMessage lastMessage={lastMessage} />
+		<div className='container'>
+			<div className='container-panel home'>
+				<div className='home-header'>
+					<ConnectedMsg connected={connected} />
+					<LogOutButton handleLogout={handleLogout} />
+				</div>
+				<ShowMessage lastMessage={lastMessage} />
+			</div>
 		</div>
 	);
 };

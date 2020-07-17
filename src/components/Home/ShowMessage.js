@@ -13,7 +13,7 @@ const ShowMessage = ({ lastMessage }) => {
 	};
 
 	return (
-		<div>
+		<div className='home-message'>
 			{getValue()}
 		</div>
 	)
